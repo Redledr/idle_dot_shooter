@@ -1,0 +1,6 @@
+res://main.tscn
+res://entities/bullet/Bullet.tscn
+res://entities/dot/Dot.tscn
+res://entities/bullet/bullet.gd
+res://main.gd
+res://entities/dot/dot.gd

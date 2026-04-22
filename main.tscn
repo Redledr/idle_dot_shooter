@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bktvii0wrf3ob"]
+
+[ext_resource type="Script" uid="uid://ca2ecde0kr052" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://u6s05xyoq5dh" path="res://entities/turret/Turret.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dojbwlvi3hppo" path="res://entities/dot/Dot.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bevpro4f3vxmj" path="res://ui/HUD.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://d26jn8tdxd07q" path="res://entities/bullet/Bullet.tscn" id="4_7mycd"]
+
+[node name="Node2D" type="Node2D" unique_id=409898883 groups=["main"]]
+script = ExtResource("1_ig7tw")
+dot_scene = ExtResource("2_lquwl")
+
+[node name="Turret" parent="." unique_id=1634898967 instance=ExtResource("2_h2yge")]
+position = Vector2(960, 540)
+bullet_scene = ExtResource("4_7mycd")
+
+[node name="HUD" parent="." unique_id=2015149012 instance=ExtResource("3_1bvp3")]

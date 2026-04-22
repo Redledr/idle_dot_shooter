@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bevpro4f3vxmj"]
+
+[ext_resource type="Script" uid="uid://g4qwwuqq2u6r" path="res://ui/hud.gd" id="1_qpvh6"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2015149012]
+script = ExtResource("1_qpvh6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=982479848]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CurrencyLabel" type="Label" parent="VBoxContainer" unique_id=1202044601]
+layout_mode = 2
+
+[node name="DotsLabel" type="Label" parent="VBoxContainer" unique_id=905616054]
+layout_mode = 2
