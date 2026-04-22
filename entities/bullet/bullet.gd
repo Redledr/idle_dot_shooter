@@ -11,6 +11,8 @@ var _screen_size: Vector2
 func _ready() -> void:
 	_screen_size = get_viewport_rect().size
 	area_entered.connect(_on_area_entered)
+	# Override damage component with current upgrade value
+	$DamageComponent.damage = UpgradeManager.get_damage()
 
 
 func set_direction(dir: Vector2) -> void:

@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-@onready var currency_label: Label = $VBoxContainer/CurrencyLabel
-@onready var dots_label: Label = $VBoxContainer/DotsLabel
+@onready var currency_label: Label = $TopCenter/CurrencyLabel
+@onready var dots_label: Label = $TopCenter/DotsLabel
 
 
 func _ready() -> void:
@@ -9,5 +9,5 @@ func _ready() -> void:
 
 
 func update_display(currency: float, dots: int) -> void:
-	currency_label.text = "$%.0f" % currency
+	currency_label.text = UpgradeManager.format_currency(currency)
 	dots_label.text = "Dots: %d" % dots

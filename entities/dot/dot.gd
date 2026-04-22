@@ -17,7 +17,7 @@ func _ready() -> void:
 	health.damaged.connect(_on_damaged)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if _is_offscreen():
 		queue_free()
 

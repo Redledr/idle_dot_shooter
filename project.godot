@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioManager="*uid://byqbuifprlanb"
+UpgradeManager="*uid://b3bpgnxu3wpgr"
 
 [display]
 
