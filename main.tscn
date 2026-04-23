@@ -4,12 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://u6s05xyoq5dh" path="res://entities/turret/Turret.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dojbwlvi3hppo" path="res://entities/dot/Dot.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bevpro4f3vxmj" path="res://ui/HUD.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dm2boxvoa0t4w" path="res://entities/drone/Drone.tscn" id="3_272bh"]
 [ext_resource type="PackedScene" uid="uid://d26jn8tdxd07q" path="res://entities/bullet/Bullet.tscn" id="4_7mycd"]
-[ext_resource type="PackedScene" uid="uid://cnclmatv6iici" path="res://ui/UpgradePanel.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c641v2yul1x1p" path="res://ui/UpgradePanel.tscn" id="6_7mycd"]
 
 [node name="Node2D" type="Node2D" unique_id=409898883 groups=["main"]]
 script = ExtResource("1_ig7tw")
 dot_scene = ExtResource("2_lquwl")
+drone_scene = ExtResource("3_272bh")
 
 [node name="Turret" parent="." unique_id=1634898967 instance=ExtResource("2_h2yge")]
 position = Vector2(960, 540)

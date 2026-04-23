@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 AudioManager="*uid://byqbuifprlanb"
 UpgradeManager="*uid://b3bpgnxu3wpgr"
+SaveManager="*uid://dvr3gk4a366g0"
 
 [display]
 

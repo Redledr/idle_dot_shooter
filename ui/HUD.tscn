@@ -21,3 +21,7 @@ layout_mode = 2
 
 [node name="DotsLabel" type="Label" parent="TopCenter" unique_id=905616054]
 layout_mode = 2
+
+[node name="OfflineLabel" type="Label" parent="." unique_id=1787523614]
+offset_right = 40.0
+offset_bottom = 23.0

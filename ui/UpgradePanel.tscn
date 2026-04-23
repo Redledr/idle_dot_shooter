@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cnclmatv6iici"]
+[gd_scene format=3 uid="uid://c641v2yul1x1p"]
 
 [ext_resource type="Script" uid="uid://dy6wk50kwn7sb" path="res://ui/upgrade_panel.gd" id="1_ui14b"]
 [ext_resource type="PackedScene" uid="uid://cjhfavdtarthf" path="res://ui/UpgradeButton.tscn" id="2_ui14b"]
@@ -52,6 +52,34 @@ display_name = "Dot Count"
 layout_mode = 2
 upgrade_id = "dot_value"
 display_name = "Dot Value"
+
+[node name="Drone" type="VBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer/Content" unique_id=2000000001]
+layout_mode = 2
+
+[node name="PanelContainer" parent="CenterContainer/VBoxContainer/PanelContainer/Content/Drone" unique_id=2000000002 instance=ExtResource("2_ui14b")]
+layout_mode = 2
+upgrade_id = "drone_speed"
+display_name = "Speed"
+
+[node name="PanelContainer2" parent="CenterContainer/VBoxContainer/PanelContainer/Content/Drone" unique_id=2000000003 instance=ExtResource("2_ui14b")]
+layout_mode = 2
+upgrade_id = "drone_damage"
+display_name = "Damage"
+
+[node name="PanelContainer3" parent="CenterContainer/VBoxContainer/PanelContainer/Content/Drone" unique_id=2000000004 instance=ExtResource("2_ui14b")]
+layout_mode = 2
+upgrade_id = "drone_agility"
+display_name = "Agility"
+
+[node name="PanelContainer4" parent="CenterContainer/VBoxContainer/PanelContainer/Content/Drone" unique_id=2000000005 instance=ExtResource("2_ui14b")]
+layout_mode = 2
+upgrade_id = "drone_size"
+display_name = "Size"
+
+[node name="PanelContainer5" parent="CenterContainer/VBoxContainer/PanelContainer/Content/Drone" unique_id=2000000006 instance=ExtResource("2_ui14b")]
+layout_mode = 2
+upgrade_id = "drone_cooldown"
+display_name = "Ram Speed"
 
 [node name="TabBar" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=304892509]
 layout_mode = 2
