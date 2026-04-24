@@ -1,11 +1,4 @@
-res://ui/HUD.tscn
-res://ui/hud.gd
+res://ui/StartScreen.tscn
+res://ui/start_screen.gd
 res://main.gd
-res://README.md
-res://upgrades/UpgradeManager.gd
-res://entities/drone/Drone.tscn
-res://entities/drone/drone.gd
-res://ui/upgrade_panel.gd
 res://ui/UpgradePanel.tscn
-res://upgrades/UpgradePanel.tscn
-res://main.tscn

@@ -137,4 +137,15 @@ func _notification(what: int) -> void:
 
 
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, _screen_size), Color(0.05, 0.05, 0.1))
+	# Background
+	draw_rect(Rect2(Vector2.ZERO, _screen_size), Color(0.04, 0.04, 0.04))
+
+	# Scanlines
+	for y in range(0, int(_screen_size.y), 4):
+		draw_line(Vector2(0, y), Vector2(_screen_size.x, y), Color(1, 1, 1, 0.025), 1.0)
+
+	# Vertical stripes
+	var cx := _screen_size.x / 2.0
+	for i in 5:
+		var x := cx - 340.0 + i * 170.0
+		draw_line(Vector2(x, 0), Vector2(x, _screen_size.y), Color(1, 1, 1, 0.04), 1.0)

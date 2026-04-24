@@ -1,22 +1,21 @@
-extends Area2D
+extends Node2D
 
-enum State { ORBITING, HUNTING, RETURNING }
+enum State { ORBITING, HUNTING }
 
 const ORBIT_RADIUS := 80.0
-const ORBIT_SPEED := 2.0  # radians per second at base
+const ORBIT_SPEED := 2.0
+
+@export var projectile_scene: PackedScene
 
 var _state: State = State.ORBITING
 var _orbit_angle: float = 0.0
 var _target: Node2D = null
 var _home: Vector2 = Vector2.ZERO
-var _ram_cooldown: float = 0.0
-
-@onready var damage_component: DamageComponent = $DamageComponent
+var _fire_cooldown: float = 0.0
 
 
 func _ready() -> void:
 	add_to_group("drones")
-	area_entered.connect(_on_area_entered)
 
 
 func init(home_position: Vector2) -> void:
@@ -25,17 +24,14 @@ func init(home_position: Vector2) -> void:
 
 
 func _process(delta: float) -> void:
-	_ram_cooldown = maxf(_ram_cooldown - delta, 0.0)
+	_fire_cooldown = maxf(_fire_cooldown - delta, 0.0)
 
 	match _state:
 		State.ORBITING:
 			_process_orbit(delta)
-			if _ram_cooldown <= 0.0:
-				_try_acquire_target()
+			_try_acquire_target()
 		State.HUNTING:
 			_process_hunt(delta)
-		State.RETURNING:
-			_process_return(delta)
 
 	queue_redraw()
 
@@ -51,21 +47,18 @@ func _process_orbit(delta: float) -> void:
 
 func _process_hunt(delta: float) -> void:
 	if not is_instance_valid(_target):
-		_enter_return()
+		_try_acquire_target()
 		return
 
+	# Move toward target
 	var speed := UpgradeManager.get_drone_speed()
 	var dir := (_target.global_position - global_position).normalized()
 	global_position += dir * speed * delta
 
-
-func _process_return(delta: float) -> void:
-	var speed := UpgradeManager.get_drone_speed()
-	var dir := (_home - global_position).normalized()
-	global_position += dir * speed * delta
-
-	if global_position.distance_to(_home) < ORBIT_RADIUS + 4.0:
-		_enter_orbit()
+	# Fire when close enough
+	var dist := global_position.distance_to(_target.global_position)
+	if dist <= 120.0 and _fire_cooldown <= 0.0:
+		_fire_at_target()
 
 
 func _try_acquire_target() -> void:
@@ -82,33 +75,22 @@ func _try_acquire_target() -> void:
 	if nearest != null:
 		_target = nearest
 		_state = State.HUNTING
+	else:
+		_state = State.ORBITING
 
 
-func _on_area_entered(area: Area2D) -> void:
-	if _state != State.HUNTING:
+func _fire_at_target() -> void:
+	if projectile_scene == null or not is_instance_valid(_target):
 		return
-	if not area.is_in_group("dots"):
-		return
 
-	var health: HealthComponent = area.get_node_or_null("HealthComponent")
-	if health:
-		health.take_damage(damage_component.get_damage())
-	AudioManager.play_hit()
+	var dir := (_target.global_position - global_position).normalized()
+	var bullet := projectile_scene.instantiate()
+	get_parent().add_child(bullet)
+	bullet.global_position = global_position
+	bullet.set_direction(dir)
 
-	_target = null
-	_ram_cooldown = UpgradeManager.get_drone_ram_cooldown()
-	_enter_return()
-
-
-func _enter_orbit() -> void:
-	_state = State.ORBITING
-	# Sync angle to current position so orbit doesn't snap
-	_orbit_angle = (global_position - _home).angle()
-
-
-func _enter_return() -> void:
-	_state = State.RETURNING
-	_target = null
+	_fire_cooldown = UpgradeManager.get_drone_ram_cooldown()
+	AudioManager.play_shoot()
 
 
 func _draw() -> void:

@@ -1,17 +1,8 @@
-[gd_scene format=3 uid="uid://dm2boxvoa0t4w"]
+[gd_scene format=3 uid="uid://drone00000001"]
 
-[ext_resource type="Script" uid="uid://c4hfgq7kvpvlm" path="res://entities/drone/drone.gd" id="1_drone1"]
-[ext_resource type="Script" uid="uid://swebrbsvweco" path="res://components/DamageComponent.gd" id="2_drone1"]
+[ext_resource type="Script" path="res://entities/drone/drone.gd" id="1_drone1"]
+[ext_resource type="PackedScene" uid="uid://d26jn8tdxd07q" path="res://entities/bullet/Bullet.tscn" id="2_drone1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_drone1"]
-
-[node name="Drone" type="Area2D" unique_id=1000000001]
-collision_layer = 4
+[node name="Drone" type="Node2D" unique_id=1000000001]
 script = ExtResource("1_drone1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1000000002]
-shape = SubResource("CircleShape2D_drone1")
-
-[node name="DamageComponent" type="Node" parent="." unique_id=1000000003]
-script = ExtResource("2_drone1")
-metadata/_custom_type_script = "uid://swebrbsvweco"
+projectile_scene = ExtResource("2_drone1")
