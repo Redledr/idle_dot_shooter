@@ -5,13 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://dojbwlvi3hppo" path="res://entities/dot/Dot.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bevpro4f3vxmj" path="res://ui/HUD.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://drone00000001" path="res://entities/drone/Drone.tscn" id="3_272bh"]
+[ext_resource type="PackedScene" uid="uid://orb000000001" path="res://entities/orb/Orb.tscn" id="4_5vw27"]
 [ext_resource type="PackedScene" uid="uid://d26jn8tdxd07q" path="res://entities/bullet/Bullet.tscn" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://c641v2yul1x1p" path="res://ui/UpgradePanel.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cursor000001" path="res://ui/Cursor.tscn" id="9_kek77"]
 
 [node name="Node2D" type="Node2D" unique_id=409898883 groups=["main"]]
 script = ExtResource("1_ig7tw")
 dot_scene = ExtResource("2_lquwl")
 drone_scene = ExtResource("3_272bh")
+orb_scene = ExtResource("4_5vw27")
+run_duration = 15.0
+card_draw_interval = 2
 
 [node name="Turret" parent="." unique_id=1634898967 instance=ExtResource("2_h2yge")]
 position = Vector2(960, 1055)
@@ -20,3 +25,5 @@ bullet_scene = ExtResource("4_7mycd")
 [node name="HUD" parent="." unique_id=2015149012 instance=ExtResource("3_1bvp3")]
 
 [node name="CanvasLayer" parent="." unique_id=2133488230 instance=ExtResource("6_7mycd")]
+
+[node name="Cursor" parent="." unique_id=1705032705 instance=ExtResource("9_kek77")]

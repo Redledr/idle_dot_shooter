@@ -1,4 +1,7 @@
-res://ui/StartScreen.tscn
-res://ui/start_screen.gd
+res://ui/CardDrawScreen.tscn
+res://ui/card_draw_screen.gd
+res://ui/end_of_run_screen.gd
 res://main.gd
-res://ui/UpgradePanel.tscn
+res://ui/cursor.gd
+res://ui/EndOfRunScreen.tscn
+res://upgrades/CardDatabase.gd

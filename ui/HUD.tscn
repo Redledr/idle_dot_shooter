@@ -6,12 +6,12 @@
 script = ExtResource("1_qpvh6")
 
 [node name="TopCenter" type="HBoxContainer" parent="." unique_id=1863854406]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(400, 50)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
+offset_left = -200.0
+offset_right = 200.0
 offset_bottom = 50.0
 grow_horizontal = 2
 alignment = 1
@@ -22,9 +22,18 @@ layout_mode = 2
 [node name="DotsLabel" type="Label" parent="TopCenter" unique_id=905616054]
 layout_mode = 2
 
-[node name="OfflineLabel" type="Label" parent="." unique_id=1787523614]
-offset_left = 25.0
-offset_top = 25.0
-offset_right = 78.0
-offset_bottom = 48.0
-text = "Offline"
+[node name="TimerLabel" type="Label" parent="TopCenter" unique_id=1300000001]
+layout_mode = 2
+text = "5:00"
+
+[node name="OfflineLabel" type="Label" parent="." unique_id=1100000001]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 60.0
+offset_right = 150.0
+offset_bottom = 110.0
+grow_horizontal = 2
+horizontal_alignment = 1

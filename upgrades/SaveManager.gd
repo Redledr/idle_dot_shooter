@@ -3,7 +3,7 @@ extends Node
 const SAVE_PATH := "user://save.json"
 const SAVE_VERSION := 1
 
-signal game_loaded
+
 
 
 func save_game(currency: float, dots_destroyed: int) -> void:

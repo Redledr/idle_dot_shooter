@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cursor000001"]
+
+[ext_resource type="Script" path="res://ui/cursor.gd" id="1_cursor"]
+
+[node name="Cursor" type="Node2D" unique_id=6000000001]
+script = ExtResource("1_cursor")

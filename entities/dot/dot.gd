@@ -12,7 +12,6 @@ func _ready() -> void:
 	add_to_group("dots")
 	_screen_size = get_viewport_rect().size
 	_dot_color = Color(randf(), randf_range(0.5, 1.0), randf_range(0.5, 1.0))
-
 	health.died.connect(_on_died)
 	health.damaged.connect(_on_damaged)
 
@@ -26,7 +25,7 @@ func _on_died() -> void:
 	AudioManager.play_pop()
 	var main = get_tree().get_first_node_in_group("main")
 	if main:
-		main.on_dot_destroyed(currency_value)
+		main.spawn_orb(global_position, currency_value)
 	queue_free()
 
 

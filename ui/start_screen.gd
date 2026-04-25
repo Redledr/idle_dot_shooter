@@ -177,7 +177,7 @@ func _draw() -> void:
 	_draw_corner_brackets(cx, cy)
 
 
-func _draw_buttons(cx: float) -> void:
+func _draw_buttons(_cx: float) -> void:
 	var font := ThemeDB.fallback_font
 	for i in _buttons.size():
 		var btn: Dictionary = _buttons[i]
