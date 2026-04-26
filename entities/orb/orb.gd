@@ -27,12 +27,19 @@ func init(pos: Vector2, orb_value: float) -> void:
 	value = orb_value
 	var main := get_tree().get_first_node_in_group("main")
 	if main:
-		pickup_radius = main.orb_pickup_radius
+		if main.has_method("get_effective_pickup_radius"):
+			pickup_radius = main.get_effective_pickup_radius()
+		else:
+			pickup_radius = main.orb_pickup_radius
 
 
 func pull_to(target: Vector2) -> void:
 	_pull_target = target
 	_being_pulled = true
+
+
+func collect_now() -> void:
+	_collect()
 
 
 func _process(delta: float) -> void:

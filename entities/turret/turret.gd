@@ -22,12 +22,10 @@ func _on_fire_requested() -> void:
 
 
 func _spawn_bullet(direction: Vector2) -> void:
-	if bullet_scene == null:
+	var main := get_tree().get_first_node_in_group("main")
+	if main == null:
 		return
-	var bullet = bullet_scene.instantiate()
-	get_parent().add_child(bullet)
-	bullet.global_position = global_position
-	bullet.set_direction(direction)
+	main.spawn_runtime_bullet(bullet_scene, global_position, direction)
 
 
 func _get_nearest_dot() -> Node2D:
