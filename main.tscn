@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d26jn8tdxd07q" path="res://entities/bullet/Bullet.tscn" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://c641v2yul1x1p" path="res://ui/UpgradePanel.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cursor000001" path="res://ui/Cursor.tscn" id="9_kek77"]
+[ext_resource type="Script" uid="uid://btvtfecmyygv" path="res://ui/telemetry_overlay.gd" id="10_4c57u"]
 
 [node name="Node2D" type="Node2D" unique_id=409898883 groups=["main"]]
 script = ExtResource("1_ig7tw")
@@ -27,3 +28,6 @@ bullet_scene = ExtResource("4_7mycd")
 [node name="CanvasLayer" parent="." unique_id=2133488230 instance=ExtResource("6_7mycd")]
 
 [node name="Cursor" parent="." unique_id=1705032705 instance=ExtResource("9_kek77")]
+
+[node name="CanvasLayer2" type="Node2D" parent="." unique_id=1449525935]
+script = ExtResource("10_4c57u")

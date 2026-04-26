@@ -1,4 +1,4 @@
-extends CanvasItem
+extends Node2D
 
 const SETTINGS_PATH := "user://settings.json"
 const UPDATE_INTERVAL := 0.5

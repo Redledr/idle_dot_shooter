@@ -1,3 +1,5 @@
+Node2D
+CanvasLayer
 Label
 HBoxContainer
 VBoxContainer
@@ -5,7 +7,6 @@ Button
 PanelContainer
 TabBar
 CenterContainer
-CanvasLayer
 Polygon2D
 DriftComponent
 HealthComponent

@@ -1,4 +1,2 @@
 res://main.tscn
-res://data/cards.json
 res://ui/telemetry_overlay.gd
-res://ui/SettingsScreen.tscn
