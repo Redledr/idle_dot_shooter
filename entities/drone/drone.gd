@@ -84,10 +84,9 @@ func _fire_at_target() -> void:
 		return
 
 	var dir := (_target.global_position - global_position).normalized()
-	var bullet := projectile_scene.instantiate()
-	get_parent().add_child(bullet)
-	bullet.global_position = global_position
-	bullet.set_direction(dir)
+	var main := get_tree().get_first_node_in_group("main")
+	if main:
+		main.spawn_runtime_bullet(projectile_scene, global_position, dir)
 
 	_fire_cooldown = UpgradeManager.get_drone_ram_cooldown()
 	AudioManager.play_shoot()
