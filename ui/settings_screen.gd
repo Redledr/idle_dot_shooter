@@ -40,8 +40,14 @@ var _rows := [
 	{ "id": "fullscreen", "label": "FULLSCREEN",        "type": "toggle" },
 	{ "id": "resolution", "label": "RESOLUTION",        "type": "cycle"  },
 	{ "id": "particles",  "label": "PARTICLE EFFECTS",  "type": "toggle" },
+	{ "id": "fps",        "label": "SHOW FPS",          "type": "toggle" },
+	{ "id": "cpu",        "label": "SHOW CPU / MEMORY", "type": "toggle" },
 	{ "id": "reset",      "label": "RESET SAVE",        "type": "action" },
 ]
+
+# Telemetry state
+var _show_fps: bool = false
+var _show_cpu: bool = false
 
 
 func _ready() -> void:
@@ -144,6 +150,15 @@ func _toggle(id: String) -> void:
 				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		"particles":
 			_particles_enabled = not _particles_enabled
+		"fps":
+			_show_fps = not _show_fps
+			Engine.max_fps = 0
+			if TelemetryOverlay:
+				TelemetryOverlay.set_show_fps(_show_fps)
+		"cpu":
+			_show_cpu = not _show_cpu
+			if TelemetryOverlay:
+				TelemetryOverlay.set_show_cpu(_show_cpu)
 
 
 func _cycle(id: String, _mouse: Vector2, _cx: float) -> void:
@@ -294,6 +309,8 @@ func _draw_toggle(id: String, row_y: float, cx: float, _font: Font) -> void:
 	match id:
 		"fullscreen": on = _fullscreen
 		"particles":  on = _particles_enabled
+		"fps":        on = _show_fps
+		"cpu":        on = _show_cpu
 
 	var tx := cx + 140.0
 	var ty := row_y + 6.0
@@ -405,6 +422,8 @@ func _save_settings() -> void:
 		"fullscreen": _fullscreen,
 		"particles_enabled": _particles_enabled,
 		"resolution_index": _resolution_index,
+		"show_fps": _show_fps,
+		"show_cpu": _show_cpu,
 	}
 	var file := FileAccess.open(SETTINGS_PATH, FileAccess.WRITE)
 	if file:
@@ -426,6 +445,8 @@ func _load_settings() -> void:
 	_fullscreen = bool(parsed.get("fullscreen", false))
 	_particles_enabled = bool(parsed.get("particles_enabled", true))
 	_resolution_index = int(parsed.get("resolution_index", 0))
+	_show_fps = bool(parsed.get("show_fps", false))
+	_show_cpu = bool(parsed.get("show_cpu", false))
 	AudioServer.set_bus_volume_db(0, linear_to_db(_master_volume))
 	if _fullscreen:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)

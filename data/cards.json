@@ -1,0 +1,1111 @@
+{
+  "cards": [
+	{
+	  "id": "rapid_fire",
+	  "name": "Rapid Fire",
+	  "description": "Fire rate +1 level",
+	  "rarity": "common",
+	  "category": "turret",
+	  "effect_key": "fire_rate_levels",
+	  "effect_value": 1
+	},
+	{
+	  "id": "heavy_rounds",
+	  "name": "Heavy Rounds",
+	  "description": "Bullet damage +3 levels",
+	  "rarity": "common",
+	  "category": "turret",
+	  "effect_key": "damage_levels",
+	  "effect_value": 3
+	},
+	{
+	  "id": "double_tap",
+	  "name": "Double Tap",
+	  "description": "Fire rate +2 levels",
+	  "rarity": "common",
+	  "category": "turret",
+	  "effect_key": "fire_rate_levels",
+	  "effect_value": 2
+	},
+	{
+	  "id": "sharpshooter",
+	  "name": "Sharpshooter",
+	  "description": "Bullet damage +5 levels",
+	  "rarity": "rare",
+	  "category": "turret",
+	  "effect_key": "damage_levels",
+	  "effect_value": 5
+	},
+	{
+	  "id": "overclocked",
+	  "name": "Overclocked",
+	  "description": "Fire rate +6 levels. Bullets are tiny.",
+	  "rarity": "rare",
+	  "category": "turret",
+	  "effect_key": "fire_rate_levels",
+	  "effect_value": 6
+	},
+	{
+	  "id": "gatling",
+	  "name": "Gatling",
+	  "description": "Fire rate +10 levels",
+	  "rarity": "epic",
+	  "category": "turret",
+	  "effect_key": "fire_rate_levels",
+	  "effect_value": 10
+	},
+	{
+	  "id": "depleted_core",
+	  "name": "Depleted Core",
+	  "description": "Bullet damage +8 levels",
+	  "rarity": "epic",
+	  "category": "turret",
+	  "effect_key": "damage_levels",
+	  "effect_value": 8
+	},
+	{
+	  "id": "piercing",
+	  "name": "Piercing Shot",
+	  "description": "Bullets pass through all dots",
+	  "rarity": "legendary",
+	  "category": "turret",
+	  "effect_key": "bullets_pierce",
+	  "effect_value": 1
+	},
+	{
+	  "id": "bullet_storm",
+	  "name": "Bullet Storm",
+	  "description": "Fire rate +15 levels",
+	  "rarity": "legendary",
+	  "category": "turret",
+	  "effect_key": "fire_rate_levels",
+	  "effect_value": 15
+	},
+	{
+	  "id": "god_mode_turret",
+	  "name": "Obliterator",
+	  "description": "Bullet damage +15 levels, fire rate +8 levels",
+	  "rarity": "legendary",
+	  "category": "turret",
+	  "effect_key": "damage_and_rate",
+	  "effect_value": 1
+	},
+	{
+	  "id": "suppression",
+	  "name": "Suppression",
+	  "description": "Fire rate +3, damage +3 levels",
+	  "rarity": "rare",
+	  "category": "turret",
+	  "effect_key": "balanced_boost",
+	  "effect_value": 3
+	},
+	{
+	  "id": "hollow_point",
+	  "name": "Hollow Point",
+	  "description": "Bullet damage +4 levels",
+	  "rarity": "common",
+	  "category": "turret",
+	  "effect_key": "damage_levels",
+	  "effect_value": 4
+	},
+	{
+	  "id": "overcharge",
+	  "name": "Overcharge",
+	  "description": "Fire rate +4 levels",
+	  "rarity": "common",
+	  "category": "turret",
+	  "effect_key": "fire_rate_levels",
+	  "effect_value": 4
+	},
+	{
+	  "id": "drone_speed_boost",
+	  "name": "Afterburner",
+	  "description": "Drone speed +4 levels",
+	  "rarity": "common",
+	  "category": "drone",
+	  "effect_key": "drone_speed_levels",
+	  "effect_value": 4
+	},
+	{
+	  "id": "drone_damage_boost",
+	  "name": "Warhead",
+	  "description": "Drone damage +4 levels",
+	  "rarity": "rare",
+	  "category": "drone",
+	  "effect_key": "drone_damage_levels",
+	  "effect_value": 4
+	},
+	{
+	  "id": "twin_drone",
+	  "name": "Twin Protocol",
+	  "description": "Spawns a second drone",
+	  "rarity": "legendary",
+	  "category": "drone",
+	  "effect_key": "spawn_drone",
+	  "effect_value": 1
+	},
+	{
+	  "id": "drone_agility",
+	  "name": "Quicksilver",
+	  "description": "Drone agility +5 levels",
+	  "rarity": "common",
+	  "category": "drone",
+	  "effect_key": "drone_agility_levels",
+	  "effect_value": 5
+	},
+	{
+	  "id": "drone_size",
+	  "name": "Bulk Up",
+	  "description": "Drone size +6 levels",
+	  "rarity": "common",
+	  "category": "drone",
+	  "effect_key": "drone_size_levels",
+	  "effect_value": 6
+	},
+	{
+	  "id": "drone_cooldown",
+	  "name": "Hair Trigger",
+	  "description": "Drone ram speed +5 levels",
+	  "rarity": "rare",
+	  "category": "drone",
+	  "effect_key": "drone_cooldown_levels",
+	  "effect_value": 5
+	},
+	{
+	  "id": "swarm",
+	  "name": "Swarm Protocol",
+	  "description": "Spawns two extra drones",
+	  "rarity": "epic",
+	  "category": "drone",
+	  "effect_key": "spawn_drone",
+	  "effect_value": 2
+	},
+	{
+	  "id": "hunter_killer",
+	  "name": "Hunter-Killer",
+	  "description": "Drone speed +8, damage +8 levels",
+	  "rarity": "epic",
+	  "category": "drone",
+	  "effect_key": "drone_combo",
+	  "effect_value": 8
+	},
+	{
+	  "id": "sentinel",
+	  "name": "Sentinel",
+	  "description": "Drone agility +10 levels",
+	  "rarity": "epic",
+	  "category": "drone",
+	  "effect_key": "drone_agility_levels",
+	  "effect_value": 10
+	},
+	{
+	  "id": "apex_drone",
+	  "name": "Apex Predator",
+	  "description": "All drone stats +6 levels",
+	  "rarity": "legendary",
+	  "category": "drone",
+	  "effect_key": "drone_all",
+	  "effect_value": 6
+	},
+	{
+	  "id": "phantom",
+	  "name": "Phantom",
+	  "description": "Drone moves at double speed permanently",
+	  "rarity": "legendary",
+	  "category": "drone",
+	  "effect_key": "drone_speed_levels",
+	  "effect_value": 12
+	},
+	{
+	  "id": "bonus_orbs",
+	  "name": "Windfall",
+	  "description": "Dots drop 2 orbs on death",
+	  "rarity": "common",
+	  "category": "economy",
+	  "effect_key": "orbs_per_kill",
+	  "effect_value": 1
+	},
+	{
+	  "id": "orb_magnet",
+	  "name": "Magnet",
+	  "description": "Pickup radius x2",
+	  "rarity": "rare",
+	  "category": "economy",
+	  "effect_key": "pickup_radius_mul",
+	  "effect_value": 2
+	},
+	{
+	  "id": "chain_collect",
+	  "name": "Chain Reaction",
+	  "description": "Collecting an orb pulls nearby orbs in",
+	  "rarity": "legendary",
+	  "category": "economy",
+	  "effect_key": "chain_pickup",
+	  "effect_value": 1
+	},
+	{
+	  "id": "dot_value_up",
+	  "name": "Gold Rush",
+	  "description": "Dot value +4 levels",
+	  "rarity": "common",
+	  "category": "economy",
+	  "effect_key": "dot_value_levels",
+	  "effect_value": 4
+	},
+	{
+	  "id": "spawn_more",
+	  "name": "Population Boom",
+	  "description": "Dot count +5 levels",
+	  "rarity": "common",
+	  "category": "economy",
+	  "effect_key": "spawn_count_levels",
+	  "effect_value": 5
+	},
+	{
+	  "id": "triple_drop",
+	  "name": "Triple Drop",
+	  "description": "Dots drop 3 orbs on death",
+	  "rarity": "rare",
+	  "category": "economy",
+	  "effect_key": "orbs_per_kill",
+	  "effect_value": 2
+	},
+	{
+	  "id": "orb_vacuum",
+	  "name": "Vacuum",
+	  "description": "Pickup radius x3",
+	  "rarity": "epic",
+	  "category": "economy",
+	  "effect_key": "pickup_radius_mul",
+	  "effect_value": 3
+	},
+	{
+	  "id": "midas",
+	  "name": "Midas Touch",
+	  "description": "Dot value +10 levels",
+	  "rarity": "epic",
+	  "category": "economy",
+	  "effect_key": "dot_value_levels",
+	  "effect_value": 10
+	},
+	{
+	  "id": "abundance",
+	  "name": "Abundance",
+	  "description": "Dot count +10 levels",
+	  "rarity": "epic",
+	  "category": "economy",
+	  "effect_key": "spawn_count_levels",
+	  "effect_value": 10
+	},
+	{
+	  "id": "jackpot",
+	  "name": "Jackpot",
+	  "description": "Dots drop 5 orbs on death",
+	  "rarity": "legendary",
+	  "category": "economy",
+	  "effect_key": "orbs_per_kill",
+	  "effect_value": 4
+	},
+	{
+	  "id": "black_hole_orb",
+	  "name": "Singularity",
+	  "description": "Pickup radius x5, chain pickup enabled",
+	  "rarity": "legendary",
+	  "category": "economy",
+	  "effect_key": "pickup_radius_mul",
+	  "effect_value": 5
+	},
+	{
+	  "id": "frugal",
+	  "name": "Frugal",
+	  "description": "Dot value +2 levels",
+	  "rarity": "common",
+	  "category": "economy",
+	  "effect_key": "dot_value_levels",
+	  "effect_value": 2
+	},
+	{
+	  "id": "overflow",
+	  "name": "Overflow",
+	  "description": "Dot count +3 levels",
+	  "rarity": "common",
+	  "category": "economy",
+	  "effect_key": "spawn_count_levels",
+	  "effect_value": 3
+	},
+	{
+	  "id": "dot_frenzy",
+	  "name": "Dot Frenzy",
+	  "description": "Double the dots. Double the chaos.",
+	  "rarity": "rare",
+	  "category": "wildcard",
+	  "effect_key": "spawn_count_levels",
+	  "effect_value": 5
+	},
+	{
+	  "id": "time_warp",
+	  "name": "Time Warp",
+	  "description": "+30 seconds added to the run",
+	  "rarity": "legendary",
+	  "category": "wildcard",
+	  "effect_key": "run_duration_add",
+	  "effect_value": 30
+	},
+	{
+	  "id": "time_dilation",
+	  "name": "Time Dilation",
+	  "description": "+60 seconds added to the run",
+	  "rarity": "legendary",
+	  "category": "wildcard",
+	  "effect_key": "run_duration_add",
+	  "effect_value": 60
+	},
+	{
+	  "id": "overclock_all",
+	  "name": "System Overclock",
+	  "description": "All turret stats +4 levels",
+	  "rarity": "epic",
+	  "category": "wildcard",
+	  "effect_key": "turret_all",
+	  "effect_value": 4
+	},
+	{
+	  "id": "everything_faster",
+	  "name": "Hyperdrive",
+	  "description": "Fire rate +8, drone speed +8 levels",
+	  "rarity": "epic",
+	  "category": "wildcard",
+	  "effect_key": "speed_combo",
+	  "effect_value": 8
+	},
+	{
+	  "id": "big_bang",
+	  "name": "Big Bang",
+	  "description": "Every stat +3 levels",
+	  "rarity": "legendary",
+	  "category": "wildcard",
+	  "effect_key": "all_stats",
+	  "effect_value": 3
+	},
+	{
+	  "id": "entropy",
+	  "name": "Entropy",
+	  "description": "+45 seconds and dot count +8 levels",
+	  "rarity": "epic",
+	  "category": "wildcard",
+	  "effect_key": "time_and_dots",
+	  "effect_value": 1
+	},
+	{
+	  "id": "cascade",
+	  "name": "Cascade",
+	  "description": "Fire rate +5, dot value +5 levels",
+	  "rarity": "rare",
+	  "category": "wildcard",
+	  "effect_key": "rate_and_value",
+	  "effect_value": 5
+	},
+	{
+	  "id": "balanced_diet",
+	  "name": "Balanced Diet",
+	  "description": "All stats +1 level",
+	  "rarity": "common",
+	  "category": "wildcard",
+	  "effect_key": "all_stats",
+	  "effect_value": 1
+	},
+	{
+	  "id": "wild_surge",
+	  "name": "Wild Surge",
+	  "description": "Random stat gets +12 levels",
+	  "rarity": "rare",
+	  "category": "wildcard",
+	  "effect_key": "random_stat",
+	  "effect_value": 12
+	},
+	{
+	  "id": "chaos_theory",
+	  "name": "Chaos Theory",
+	  "description": "Three random stats get +6 levels each",
+	  "rarity": "epic",
+	  "category": "wildcard",
+	  "effect_key": "random_three",
+	  "effect_value": 6
+	},
+	{
+	  "id": "the_singularity",
+	  "name": "The Singularity",
+	  "description": "Every stat +8 levels",
+	  "rarity": "legendary",
+	  "category": "wildcard",
+	  "effect_key": "all_stats",
+	  "effect_value": 8
+	},
+	{
+	  "id": "fire_touch",
+	  "name": "Ember",
+	  "description": "Bullets leave a fire trail — dots take +1 damage/sec",
+	  "rarity": "common",
+	  "category": "elemental",
+	  "effect_key": "dot_fire",
+	  "effect_value": 1
+	},
+	{
+	  "id": "inferno",
+	  "name": "Inferno",
+	  "description": "Fire trail damage triples",
+	  "rarity": "rare",
+	  "category": "elemental",
+	  "effect_key": "dot_fire",
+	  "effect_value": 3
+	},
+	{
+	  "id": "wildfire",
+	  "name": "Wildfire",
+	  "description": "Fire spreads to adjacent dots on death",
+	  "rarity": "epic",
+	  "category": "elemental",
+	  "effect_key": "fire_spread",
+	  "effect_value": 1
+	},
+	{
+	  "id": "solar_flare",
+	  "name": "Solar Flare",
+	  "description": "Every 10th bullet detonates in an AoE",
+	  "rarity": "epic",
+	  "category": "elemental",
+	  "effect_key": "solar_flare",
+	  "effect_value": 10
+	},
+	{
+	  "id": "phoenix",
+	  "name": "Phoenix",
+	  "description": "Bullets deal fire damage AND pierce",
+	  "rarity": "legendary",
+	  "category": "elemental",
+	  "effect_key": "fire_and_pierce",
+	  "effect_value": 1
+	},
+	{
+	  "id": "frost_round",
+	  "name": "Frost Round",
+	  "description": "Bullets slow dot respawn timer by 2s",
+	  "rarity": "common",
+	  "category": "elemental",
+	  "effect_key": "frost_slow",
+	  "effect_value": 2
+	},
+	{
+	  "id": "blizzard",
+	  "name": "Blizzard",
+	  "description": "All active dots take frost damage",
+	  "rarity": "rare",
+	  "category": "elemental",
+	  "effect_key": "frost_aoe",
+	  "effect_value": 1
+	},
+	{
+	  "id": "absolute_zero",
+	  "name": "Absolute Zero",
+	  "description": "Dots take 2x damage for 5s after bullet hit",
+	  "rarity": "epic",
+	  "category": "elemental",
+	  "effect_key": "frost_debuff",
+	  "effect_value": 2
+	},
+	{
+	  "id": "glacier",
+	  "name": "Glacier",
+	  "description": "Frost damage quintupled",
+	  "rarity": "legendary",
+	  "category": "elemental",
+	  "effect_key": "frost_slow",
+	  "effect_value": 10
+	},
+	{
+	  "id": "lightning_rod",
+	  "name": "Lightning Rod",
+	  "description": "Every kill chains 1 damage to nearest dot",
+	  "rarity": "common",
+	  "category": "elemental",
+	  "effect_key": "chain_lightning",
+	  "effect_value": 1
+	},
+	{
+	  "id": "tesla",
+	  "name": "Tesla Coil",
+	  "description": "Chain lightning hits 3 dots",
+	  "rarity": "rare",
+	  "category": "elemental",
+	  "effect_key": "chain_lightning",
+	  "effect_value": 3
+	},
+	{
+	  "id": "storm_caller",
+	  "name": "Storm Caller",
+	  "description": "Chain lightning hits 6 dots at 2x damage",
+	  "rarity": "epic",
+	  "category": "elemental",
+	  "effect_key": "chain_lightning",
+	  "effect_value": 6
+	},
+	{
+	  "id": "ball_lightning",
+	  "name": "Ball Lightning",
+	  "description": "Bullets bounce between nearest dots twice",
+	  "rarity": "legendary",
+	  "category": "elemental",
+	  "effect_key": "bullet_bounce",
+	  "effect_value": 2
+	},
+	{
+	  "id": "acid_round",
+	  "name": "Acid Round",
+	  "description": "Dots hit by bullets take +0.5 damage/sec",
+	  "rarity": "common",
+	  "category": "elemental",
+	  "effect_key": "dot_acid",
+	  "effect_value": 1
+	},
+	{
+	  "id": "corrosion",
+	  "name": "Corrosion",
+	  "description": "Acid DoT stacks up to 5x",
+	  "rarity": "rare",
+	  "category": "elemental",
+	  "effect_key": "acid_stack",
+	  "effect_value": 5
+	},
+	{
+	  "id": "toxic_cloud",
+	  "name": "Toxic Cloud",
+	  "description": "Dots within radius of death take acid damage",
+	  "rarity": "epic",
+	  "category": "elemental",
+	  "effect_key": "acid_aoe",
+	  "effect_value": 1
+	},
+	{
+	  "id": "plague",
+	  "name": "The Plague",
+	  "description": "Acid spreads on kill, stacks infinitely",
+	  "rarity": "legendary",
+	  "category": "elemental",
+	  "effect_key": "acid_spread",
+	  "effect_value": 1
+	},
+	{
+	  "id": "void_round",
+	  "name": "Void Round",
+	  "description": "Bullets ignore 50% of dot HP",
+	  "rarity": "epic",
+	  "category": "elemental",
+	  "effect_key": "void_pen",
+	  "effect_value": 50
+	},
+	{
+	  "id": "dark_matter",
+	  "name": "Dark Matter",
+	  "description": "Every dot has max HP halved",
+	  "rarity": "legendary",
+	  "category": "elemental",
+	  "effect_key": "hp_halve",
+	  "effect_value": 1
+	},
+	{
+	  "id": "chain_kill",
+	  "name": "Chain Kill",
+	  "description": "Killing a dot fires a bonus bullet at nearest dot",
+	  "rarity": "common",
+	  "category": "chain",
+	  "effect_key": "chain_kill",
+	  "effect_value": 1
+	},
+	{
+	  "id": "double_chain",
+	  "name": "Double Chain",
+	  "description": "Chain kill fires 2 bonus bullets",
+	  "rarity": "rare",
+	  "category": "chain",
+	  "effect_key": "chain_kill",
+	  "effect_value": 2
+	},
+	{
+	  "id": "ricochet",
+	  "name": "Ricochet",
+	  "description": "Bullets bounce once after hitting a dot",
+	  "rarity": "rare",
+	  "category": "chain",
+	  "effect_key": "bullet_bounce",
+	  "effect_value": 1
+	},
+	{
+	  "id": "chain_reaction",
+	  "name": "Chain Reaction",
+	  "description": "Kills trigger a shockwave damaging nearby dots",
+	  "rarity": "epic",
+	  "category": "chain",
+	  "effect_key": "shockwave",
+	  "effect_value": 1
+	},
+	{
+	  "id": "domino",
+	  "name": "Domino",
+	  "description": "Each kill increases next bullet damage by 10%",
+	  "rarity": "rare",
+	  "category": "chain",
+	  "effect_key": "kill_stack",
+	  "effect_value": 10
+	},
+	{
+	  "id": "avalanche",
+	  "name": "Avalanche",
+	  "description": "Domino effect caps at 300% instead of 100%",
+	  "rarity": "epic",
+	  "category": "chain",
+	  "effect_key": "kill_stack_cap",
+	  "effect_value": 300
+	},
+	{
+	  "id": "execution",
+	  "name": "Execution",
+	  "description": "Killing a dot below 25% HP fires 3 bonus bullets",
+	  "rarity": "rare",
+	  "category": "chain",
+	  "effect_key": "execute_bonus",
+	  "effect_value": 3
+	},
+	{
+	  "id": "massacre",
+	  "name": "Massacre",
+	  "description": "Every 5th kill fires a full turret volley instantly",
+	  "rarity": "epic",
+	  "category": "chain",
+	  "effect_key": "volley_every",
+	  "effect_value": 5
+	},
+	{
+	  "id": "frenzy",
+	  "name": "Kill Frenzy",
+	  "description": "Each kill in 2s gives +10% fire rate for 3s",
+	  "rarity": "rare",
+	  "category": "chain",
+	  "effect_key": "frenzy_stack",
+	  "effect_value": 10
+	},
+	{
+	  "id": "bloodlust",
+	  "name": "Bloodlust",
+	  "description": "Kill streaks give +50% fire rate",
+	  "rarity": "epic",
+	  "category": "chain",
+	  "effect_key": "frenzy_stack",
+	  "effect_value": 50
+	},
+	{
+	  "id": "annihilator",
+	  "name": "Annihilator",
+	  "description": "Every 10th kill nukes all dots on screen",
+	  "rarity": "legendary",
+	  "category": "chain",
+	  "effect_key": "nuke_every",
+	  "effect_value": 10
+	},
+	{
+	  "id": "combo_breaker",
+	  "name": "Combo Breaker",
+	  "description": "Collecting 5 orbs in 3s fires a mega bullet",
+	  "rarity": "rare",
+	  "category": "chain",
+	  "effect_key": "orb_combo",
+	  "effect_value": 5
+	},
+	{
+	  "id": "hyperkill",
+	  "name": "Hyperkill",
+	  "description": "Chain kills add +1 orb drop per chain link",
+	  "rarity": "legendary",
+	  "category": "chain",
+	  "effect_key": "chain_orb_bonus",
+	  "effect_value": 1
+	},
+	{
+	  "id": "poison_tip",
+	  "name": "Poison Tip",
+	  "description": "Bullets apply 0.5 damage/sec for 3s",
+	  "rarity": "common",
+	  "category": "dot",
+	  "effect_key": "dot_poison",
+	  "effect_value": 1
+	},
+	{
+	  "id": "venom",
+	  "name": "Venom",
+	  "description": "Poison DoT damage doubled",
+	  "rarity": "rare",
+	  "category": "dot",
+	  "effect_key": "dot_poison",
+	  "effect_value": 2
+	},
+	{
+	  "id": "neurotoxin",
+	  "name": "Neurotoxin",
+	  "description": "Poison lasts 8s instead of 3s",
+	  "rarity": "epic",
+	  "category": "dot",
+	  "effect_key": "dot_duration",
+	  "effect_value": 8
+	},
+	{
+	  "id": "plague_carrier",
+	  "name": "Plague Carrier",
+	  "description": "Poison spreads to nearest dot on death",
+	  "rarity": "epic",
+	  "category": "dot",
+	  "effect_key": "dot_spread",
+	  "effect_value": 1
+	},
+	{
+	  "id": "pandemic",
+	  "name": "Pandemic",
+	  "description": "Poison spreads to 3 nearest dots",
+	  "rarity": "legendary",
+	  "category": "dot",
+	  "effect_key": "dot_spread",
+	  "effect_value": 3
+	},
+	{
+	  "id": "burning_rounds",
+	  "name": "Burning Rounds",
+	  "description": "Bullets apply 1 fire damage/sec for 2s",
+	  "rarity": "common",
+	  "category": "dot",
+	  "effect_key": "dot_fire",
+	  "effect_value": 1
+	},
+	{
+	  "id": "napalm",
+	  "name": "Napalm",
+	  "description": "Fire DoT duration extended to 6s",
+	  "rarity": "rare",
+	  "category": "dot",
+	  "effect_key": "dot_fire_duration",
+	  "effect_value": 6
+	},
+	{
+	  "id": "spontaneous",
+	  "name": "Spontaneous Combustion",
+	  "description": "Dots at full HP take 2x fire damage",
+	  "rarity": "epic",
+	  "category": "dot",
+	  "effect_key": "fire_bonus_full_hp",
+	  "effect_value": 2
+	},
+	{
+	  "id": "eternal_flame",
+	  "name": "Eternal Flame",
+	  "description": "Fire DoT never expires — lasts until death",
+	  "rarity": "legendary",
+	  "category": "dot",
+	  "effect_key": "dot_fire_permanent",
+	  "effect_value": 1
+	},
+	{
+	  "id": "bleed",
+	  "name": "Bleed",
+	  "description": "Bullets cause bleed: 0.25 damage/sec for 5s",
+	  "rarity": "common",
+	  "category": "dot",
+	  "effect_key": "dot_bleed",
+	  "effect_value": 1
+	},
+	{
+	  "id": "hemorrhage",
+	  "name": "Hemorrhage",
+	  "description": "Bleed damage triples",
+	  "rarity": "rare",
+	  "category": "dot",
+	  "effect_key": "dot_bleed",
+	  "effect_value": 3
+	},
+	{
+	  "id": "rupture",
+	  "name": "Rupture",
+	  "description": "Bleed stacks up to 10x on same dot",
+	  "rarity": "epic",
+	  "category": "dot",
+	  "effect_key": "bleed_stack",
+	  "effect_value": 10
+	},
+	{
+	  "id": "exsanguinate",
+	  "name": "Exsanguinate",
+	  "description": "Bleed kills drop double orbs",
+	  "rarity": "legendary",
+	  "category": "dot",
+	  "effect_key": "bleed_orb_bonus",
+	  "effect_value": 2
+	},
+	{
+	  "id": "cluster_bomb",
+	  "name": "Cluster Bomb",
+	  "description": "Every 20 shots fires a cluster that hits 3 dots",
+	  "rarity": "rare",
+	  "category": "nuke",
+	  "effect_key": "cluster_every",
+	  "effect_value": 20
+	},
+	{
+	  "id": "carpet_bomb",
+	  "name": "Carpet Bomb",
+	  "description": "Cluster hits 6 dots",
+	  "rarity": "epic",
+	  "category": "nuke",
+	  "effect_key": "cluster_every",
+	  "effect_value": 10
+	},
+	{
+	  "id": "mini_nuke",
+	  "name": "Mini Nuke",
+	  "description": "Every 30 kills triggers a small area nuke",
+	  "rarity": "rare",
+	  "category": "nuke",
+	  "effect_key": "nuke_every",
+	  "effect_value": 30
+	},
+	{
+	  "id": "tactical_nuke",
+	  "name": "Tactical Nuke",
+	  "description": "Area nuke damage x3 and radius x2",
+	  "rarity": "epic",
+	  "category": "nuke",
+	  "effect_key": "nuke_power",
+	  "effect_value": 3
+	},
+	{
+	  "id": "thermonuclear",
+	  "name": "Thermonuclear",
+	  "description": "Nuke hits every dot on screen for 5 damage",
+	  "rarity": "legendary",
+	  "category": "nuke",
+	  "effect_key": "screen_nuke",
+	  "effect_value": 5
+	},
+	{
+	  "id": "emp_pulse",
+	  "name": "EMP Pulse",
+	  "description": "Every 15 kills fires an EMP that stuns all dots 1s",
+	  "rarity": "rare",
+	  "category": "nuke",
+	  "effect_key": "emp_every",
+	  "effect_value": 15
+	},
+	{
+	  "id": "orbital_strike",
+	  "name": "Orbital Strike",
+	  "description": "Every 50 orbs collected calls an orbital strike",
+	  "rarity": "epic",
+	  "category": "nuke",
+	  "effect_key": "orbital_every",
+	  "effect_value": 50
+	},
+	{
+	  "id": "extinction_event",
+	  "name": "Extinction Event",
+	  "description": "Once per run: nuke all dots for 20 damage",
+	  "rarity": "legendary",
+	  "category": "nuke",
+	  "effect_key": "extinction",
+	  "effect_value": 20
+	},
+	{
+	  "id": "gravity_well",
+	  "name": "Gravity Well",
+	  "description": "Nuke pulls all dots to center before detonating",
+	  "rarity": "legendary",
+	  "category": "nuke",
+	  "effect_key": "gravity_nuke",
+	  "effect_value": 1
+	},
+	{
+	  "id": "black_hole",
+	  "name": "Black Hole",
+	  "description": "Every 25 kills spawns a black hole that absorbs 3 dots",
+	  "rarity": "epic",
+	  "category": "nuke",
+	  "effect_key": "black_hole_every",
+	  "effect_value": 25
+	},
+	{
+	  "id": "orb_haste",
+	  "name": "Orb Haste",
+	  "description": "Orbs move toward cursor 2x faster",
+	  "rarity": "common",
+	  "category": "economy",
+	  "effect_key": "orb_speed_mul",
+	  "effect_value": 2
+	},
+	{
+	  "id": "orb_lifetime",
+	  "name": "Persistence",
+	  "description": "Orb lifetime +4 seconds",
+	  "rarity": "common",
+	  "category": "economy",
+	  "effect_key": "orb_lifetime_add",
+	  "effect_value": 4
+	},
+	{
+	  "id": "orb_rush",
+	  "name": "Rush",
+	  "description": "Collecting an orb gives +0.5s to run timer",
+	  "rarity": "rare",
+	  "category": "economy",
+	  "effect_key": "orb_time_bonus",
+	  "effect_value": 1
+	},
+	{
+	  "id": "gravity_magnet",
+	  "name": "Gravity Magnet",
+	  "description": "All orbs slowly drift toward cursor",
+	  "rarity": "rare",
+	  "category": "economy",
+	  "effect_key": "orb_gravity",
+	  "effect_value": 1
+	},
+	{
+	  "id": "super_magnet",
+	  "name": "Super Magnet",
+	  "description": "Pickup radius x4",
+	  "rarity": "epic",
+	  "category": "economy",
+	  "effect_key": "pickup_radius_mul",
+	  "effect_value": 4
+	},
+	{
+	  "id": "orb_frenzy",
+	  "name": "Orb Frenzy",
+	  "description": "Collecting 10 orbs in 5s doubles pickup radius for 5s",
+	  "rarity": "epic",
+	  "category": "economy",
+	  "effect_key": "orb_frenzy",
+	  "effect_value": 10
+	},
+	{
+	  "id": "eternal_magnet",
+	  "name": "Eternal Magnet",
+	  "description": "Orbs never despawn",
+	  "rarity": "legendary",
+	  "category": "economy",
+	  "effect_key": "orb_lifetime_add",
+	  "effect_value": 9999
+	},
+	{
+	  "id": "orb_explosion",
+	  "name": "Orb Nova",
+	  "description": "Collecting an orb fires bullets in 8 directions",
+	  "rarity": "legendary",
+	  "category": "economy",
+	  "effect_key": "orb_nova",
+	  "effect_value": 1
+	},
+	{
+	  "id": "second_wind",
+	  "name": "Second Wind",
+	  "description": "+20 seconds on run timer",
+	  "rarity": "common",
+	  "category": "wildcard",
+	  "effect_key": "run_duration_add",
+	  "effect_value": 20
+	},
+	{
+	  "id": "overtime",
+	  "name": "Overtime",
+	  "description": "+45 seconds on run timer",
+	  "rarity": "rare",
+	  "category": "wildcard",
+	  "effect_key": "run_duration_add",
+	  "effect_value": 45
+	},
+	{
+	  "id": "marathon",
+	  "name": "Marathon",
+	  "description": "+90 seconds on run timer",
+	  "rarity": "epic",
+	  "category": "wildcard",
+	  "effect_key": "run_duration_add",
+	  "effect_value": 90
+	},
+	{
+	  "id": "efficiency",
+	  "name": "Efficiency",
+	  "description": "Dot count -3 but dot value +8 levels",
+	  "rarity": "rare",
+	  "category": "wildcard",
+	  "effect_key": "efficient_trade",
+	  "effect_value": 1
+	},
+	{
+	  "id": "density",
+	  "name": "Density",
+	  "description": "Dot count +8, dot value +4 levels",
+	  "rarity": "epic",
+	  "category": "wildcard",
+	  "effect_key": "density_boost",
+	  "effect_value": 1
+	},
+	{
+	  "id": "overclock_economy",
+	  "name": "Economic Engine",
+	  "description": "Dot value +6, orbs per kill +1",
+	  "rarity": "rare",
+	  "category": "economy",
+	  "effect_key": "economy_combo",
+	  "effect_value": 1
+	},
+	{
+	  "id": "quantum_tunnel",
+	  "name": "Quantum Tunnel",
+	  "description": "Bullets teleport through edges and re-enter opposite side",
+	  "rarity": "epic",
+	  "category": "wildcard",
+	  "effect_key": "bullet_wrap",
+	  "effect_value": 1
+	},
+	{
+	  "id": "mirror_shot",
+	  "name": "Mirror Shot",
+	  "description": "Each bullet also fires a mirror copy from opposite side",
+	  "rarity": "legendary",
+	  "category": "wildcard",
+	  "effect_key": "mirror_bullet",
+	  "effect_value": 1
+	},
+	{
+	  "id": "auto_collect",
+	  "name": "Auto Collector",
+	  "description": "Orbs within 50px of dots auto-collected on dot death",
+	  "rarity": "rare",
+	  "category": "economy",
+	  "effect_key": "auto_collect_radius",
+	  "effect_value": 50
+	},
+	{
+	  "id": "resonance",
+	  "name": "Resonance",
+	  "description": "Every card draw adds +1 to all upgrade levels",
+	  "rarity": "legendary",
+	  "category": "wildcard",
+	  "effect_key": "per_draw_bonus",
+	  "effect_value": 1
+	},
+	{
+	  "id": "compounding",
+	  "name": "Compounding",
+	  "description": "Each upgrade level gives 2% more effect",
+	  "rarity": "legendary",
+	  "category": "wildcard",
+	  "effect_key": "compound_bonus",
+	  "effect_value": 2
+	}
+  ]
+}

@@ -1,7 +1,4 @@
-res://ui/CardDrawScreen.tscn
-res://ui/card_draw_screen.gd
-res://ui/end_of_run_screen.gd
-res://main.gd
-res://ui/cursor.gd
-res://ui/EndOfRunScreen.tscn
-res://upgrades/CardDatabase.gd
+res://main.tscn
+res://data/cards.json
+res://ui/telemetry_overlay.gd
+res://ui/SettingsScreen.tscn

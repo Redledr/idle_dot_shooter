@@ -26,6 +26,8 @@ UpgradeManager="*uid://b3bpgnxu3wpgr"
 SaveManager="*uid://dvr3gk4a366g0"
 CardDatabase="*uid://2h41ine3fn1i"
 RunManager="*uid://ck7x123limwhh"
+TelemetryOverlay="*uid://btvtfecmyygv"
+_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
 
 [display]
 
@@ -33,6 +35,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/borderless=true
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg")
 
 [rendering]
 
