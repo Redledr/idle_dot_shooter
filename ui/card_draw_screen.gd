@@ -3,12 +3,17 @@ extends Node2D
 signal card_chosen(card_id: String)
 
 @export var card_count: int = 3
+@export var use_parallax_v2: bool = false
 @export var parallax_strength: float = 28.0
 @export var hover_lift: float = 50.0
 @export var parallax_lerp_speed: float = 6.0
 @export var lift_lerp_speed: float = 8.0
 @export var tilt_strength: float = 6.0
 @export var tilt_zone_multiplier: float = 2.0
+@export var intro_duration: float = 0.55
+@export var intro_stagger: float = 0.08
+@export var intro_y_offset: float = 140.0
+@export var intro_header_offset: float = 28.0
 
 const CARD_W := 200.0
 const CARD_H := 290.0
@@ -21,6 +26,7 @@ var _screen_size: Vector2
 var _hovered_index: int = -1
 var _chosen_index: int = -1
 var _animating: bool = false
+var _intro_timer: float = 0.0
 
 # Per-card smooth state
 var _parallax_current: Array = []   # Array of Vector2
@@ -47,19 +53,17 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_time += delta
+	_intro_timer += delta
 
 	var mouse := get_global_mouse_position()
 
 	# Smooth parallax and lift per card
 	for i in _cards.size():
 		var center := _get_card_center(i)
-		var is_hovered: bool = i == _hovered_index and not _animating
+		var is_hovered: bool = i == _hovered_index and not _animating and not _is_intro_active()
 
 		# Target parallax
-		var target_parallax := Vector2.ZERO
-		if is_hovered:
-			var offset := mouse - center
-			target_parallax = offset / (_screen_size / 2.0) * parallax_strength
+		var target_parallax := _get_target_parallax(i, mouse, center, is_hovered)
 
 		_parallax_current[i] = (_parallax_current[i] as Vector2).lerp(
 			target_parallax, parallax_lerp_speed * delta
@@ -102,7 +106,7 @@ func _process(delta: float) -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if _animating:
+	if _animating or _is_intro_active():
 		return
 	if event is InputEventMouseMotion:
 		_handle_hover(event.position)
@@ -143,7 +147,10 @@ func _get_card_center(index: int) -> Vector2:
 	var start_x: float = cx - float(total - 1) * spacing / 2.0
 	var arc_t: float = float(index) / float(max(total - 1, 1)) - 0.5
 	var arc_y: float = arc_t * arc_t * ARC_DEPTH
-	return Vector2(start_x + float(index) * spacing, base_y + arc_y)
+	var intro_t := _get_intro_progress(index)
+	var intro_y := lerpf(intro_y_offset, 0.0, intro_t)
+	var intro_x := lerpf(arc_t * 34.0, 0.0, intro_t)
+	return Vector2(start_x + float(index) * spacing + intro_x, base_y + arc_y + intro_y)
 
 
 func _get_card_rect(index: int) -> Rect2:
@@ -160,9 +167,10 @@ func _get_card_rect(index: int) -> Rect2:
 func _draw() -> void:
 	var cx := _screen_size.x / 2.0
 	var font := ThemeDB.fallback_font
+	var header_t := _get_intro_header_progress()
 
 	# Dim overlay
-	draw_rect(Rect2(Vector2.ZERO, _screen_size), Color(0, 0, 0, 0.78))
+	draw_rect(Rect2(Vector2.ZERO, _screen_size), Color(0, 0, 0, 0.78 * header_t))
 
 	# Particles
 	for p in _particles:
@@ -170,8 +178,15 @@ func _draw() -> void:
 		draw_circle(p.pos, p.radius * alpha, Color(p.color.r, p.color.g, p.color.b, alpha))
 
 	# Header
-	draw_string(font, Vector2(cx - 200, _screen_size.y - CARD_H - 90),
-		"CHOOSE A CARD", HORIZONTAL_ALIGNMENT_CENTER, 400, 22, Color(1, 1, 1, 0.8))
+	draw_string(
+		font,
+		Vector2(cx - 200, _screen_size.y - CARD_H - 90 + lerpf(intro_header_offset, 0.0, header_t)),
+		"CHOOSE A CARD",
+		HORIZONTAL_ALIGNMENT_CENTER,
+		400,
+		22,
+		Color(1, 1, 1, 0.8 * header_t)
+	)
 
 	# Cards — draw non-hovered first, then hovered on top
 	for i in _cards.size():
@@ -373,3 +388,52 @@ func _burst_rarity_particles(origin: Vector2, rarity_color: Color, count: int) -
 		_particles.append(p)
 		# Suppress unused warnings
 		var _unused := edge_x + edge_y
+
+
+func _get_target_parallax(index: int, mouse: Vector2, center: Vector2, is_hovered: bool) -> Vector2:
+	if _is_intro_active():
+		return Vector2.ZERO
+
+	var offset := mouse - center
+	var screen_normalized := offset / (_screen_size / 2.0)
+	if not use_parallax_v2:
+		if is_hovered:
+			return screen_normalized * parallax_strength
+		return Vector2.ZERO
+
+	var distance := mouse.distance_to(center)
+	var radius := CARD_W * 2.25
+	var influence := clampf(1.0 - distance / radius, 0.0, 1.0)
+	influence = influence * influence * (3.0 - 2.0 * influence)
+
+	var local_normalized := Vector2(
+		clampf(offset.x / (CARD_W * 0.9), -1.0, 1.0),
+		clampf(offset.y / (CARD_H * 0.9), -1.0, 1.0)
+	)
+	var fan := float(index) - float(max(_cards.size() - 1, 1)) * 0.5
+	var ambient := Vector2(
+		sin(_time * 1.5 + float(index) * 0.7),
+		cos(_time * 1.2 + float(index) * 0.45)
+	) * 2.0 * influence
+	var target := screen_normalized * parallax_strength * (0.2 + influence * 0.5)
+	target += local_normalized * (parallax_strength * 0.35 * influence)
+	target += Vector2(fan * 1.4, -abs(fan) * 0.6) * influence
+	target += ambient
+	if is_hovered:
+		target += screen_normalized * (parallax_strength * 0.55)
+	return target
+
+
+func _is_intro_active() -> bool:
+	return _intro_timer < intro_duration + intro_stagger * float(max(_cards.size() - 1, 0))
+
+
+func _get_intro_progress(index: int) -> float:
+	var start_time := intro_stagger * float(index)
+	var t := clampf((_intro_timer - start_time) / intro_duration, 0.0, 1.0)
+	return 1.0 - pow(1.0 - t, 3.0)
+
+
+func _get_intro_header_progress() -> float:
+	var t := clampf(_intro_timer / maxf(0.01, intro_duration * 0.75), 0.0, 1.0)
+	return 1.0 - pow(1.0 - t, 2.0)

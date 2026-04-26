@@ -67,6 +67,7 @@ func apply_card(card_id: String, main: Node) -> void:
 		"balanced_boost":        UpgradeManager.levels["fire_rate"] += ni; UpgradeManager.levels["damage"] += ni; _apply_fire_rate(main)
 		"damage_and_rate":       UpgradeManager.levels["damage"] += 15; UpgradeManager.levels["fire_rate"] += 8; _apply_fire_rate(main)
 		"bullets_pierce":        main.set("bullets_pierce", true)
+		"fire_and_pierce":       main.set("bullets_pierce", true); main.dot_fire_damage = maxf(main.dot_fire_damage, 1.0)
 		# Drone
 		"drone_speed_levels":    UpgradeManager.levels["drone_speed"] += ni
 		"drone_damage_levels":   UpgradeManager.levels["drone_damage"] += ni
@@ -84,7 +85,7 @@ func apply_card(card_id: String, main: Node) -> void:
 				UpgradeManager.levels[key] += ni
 		# Economy
 		"orbs_per_kill":         main.set("orbs_per_kill", main.get("orbs_per_kill") + ni)
-		"pickup_radius_mul":     main.orb_pickup_radius *= n; main.cursor.radius = main.orb_pickup_radius
+		"pickup_radius_mul":     main.orb_pickup_radius *= n; main.refresh_pickup_radius()
 		"chain_pickup":          main.set("chain_pickup", true)
 		"dot_value_levels":      UpgradeManager.levels["dot_value"] += ni
 		"spawn_count_levels":    UpgradeManager.levels["spawn_count"] += ni
@@ -93,6 +94,7 @@ func apply_card(card_id: String, main: Node) -> void:
 		"orb_nova":              main.set("orb_nova", true)
 		"orb_speed_mul":         main.set("orb_speed_mul", main.get("orb_speed_mul") * n)
 		"orb_time_bonus":        main.set("orb_time_bonus", main.get("orb_time_bonus") + n)
+		"auto_collect_radius":   main.auto_collect_radius = maxf(main.auto_collect_radius, n)
 		"economy_combo":
 			UpgradeManager.levels["dot_value"] += 6
 			main.set("orbs_per_kill", main.get("orbs_per_kill") + 1)
@@ -132,6 +134,33 @@ func apply_card(card_id: String, main: Node) -> void:
 			for i in min(3, keys.size()):
 				UpgradeManager.levels[keys[i]] += ni
 			_apply_fire_rate(main)
+		"bullet_bounce":         main.bullet_bounces = max(main.bullet_bounces, ni)
+		"bullet_wrap":           main.bullet_wrap = true
+		"mirror_bullet":         main.mirror_bullets = true
+		"dot_fire":              main.dot_fire_damage = maxf(main.dot_fire_damage, n)
+		"frost_slow":            main.dot_respawn_delay = maxf(main.dot_respawn_delay, n)
+		"frost_aoe":             main.frost_aoe_damage = maxf(main.frost_aoe_damage, n)
+		"frost_debuff":          main.frost_debuff_multiplier = maxf(main.frost_debuff_multiplier, n)
+		"chain_lightning":
+			main.chain_lightning_hits = max(main.chain_lightning_hits, ni)
+			if ni >= 6:
+				main.chain_lightning_damage_multiplier = maxf(main.chain_lightning_damage_multiplier, 2.0)
+		"chain_kill":            main.chain_bonus_bullets = max(main.chain_bonus_bullets, ni)
+		"shockwave":             main.shockwave_damage = maxf(main.shockwave_damage, n)
+		"kill_stack":            main.kill_stack_percent = maxf(main.kill_stack_percent, n)
+		"kill_stack_cap":        main.kill_stack_cap_percent = maxf(main.kill_stack_cap_percent, n)
+		"execute_bonus":         main.execute_bonus_bullets = max(main.execute_bonus_bullets, ni)
+		"volley_every":          main.volley_every_kills = max(main.volley_every_kills, ni)
+		"frenzy_stack":          main.frenzy_stack_percent = maxf(main.frenzy_stack_percent, n)
+		"chain_orb_bonus":       main.chain_orb_bonus = max(main.chain_orb_bonus, ni)
+		"orb_combo":             main.orb_combo_threshold = max(main.orb_combo_threshold, ni)
+		"orb_frenzy":            main.orb_frenzy_threshold = max(main.orb_frenzy_threshold, ni)
+		"hp_halve":
+			main.dot_hp_scale = minf(main.dot_hp_scale, 0.5)
+			for dot in main.get_tree().get_nodes_in_group("dots"):
+				if dot.has_method("configure_runtime_modifiers"):
+					dot.configure_runtime_modifiers(0.5)
+		"per_draw_bonus":        main.per_draw_bonus_levels += ni
 		# Elemental / DoT / Nuke / Chain — flagged for future systems
 		_:
 			main.set("card_flags", _merge_flag(main.get("card_flags"), effect_key, n))
