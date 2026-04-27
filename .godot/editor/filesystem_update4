@@ -1,2 +1,1 @@
-res://main.tscn
-res://ui/telemetry_overlay.gd
+res://ui/screens/CardDrawScreen.tscn

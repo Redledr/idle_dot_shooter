@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://drone00000001"]
-
-[ext_resource type="Script" path="res://entities/drone/drone.gd" id="1_drone1"]
-[ext_resource type="PackedScene" uid="uid://d26jn8tdxd07q" path="res://entities/bullet/Bullet.tscn" id="2_drone1"]
-
-[node name="Drone" type="Node2D" unique_id=1000000001]
-script = ExtResource("1_drone1")
-projectile_scene = ExtResource("2_drone1")

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/cards/CardResource.gd" id="1_cardresource"]
+[ext_resource type="Script" path="res://data/cards/CardEffectResource.gd" id="2_effectresource"]
+
+[sub_resource type="Resource" id="Resource_effect"]
+script = ExtResource("2_effectresource")
+effect_type = "emp_every"
+value = 15
+metadata = {
+"legacy_category": "nuke",
+"legacy_rarity": "rare"
+}
+
+[resource]
+script = ExtResource("1_cardresource")
+id = "emp_pulse"
+display_name = "EMP Pulse"
+description = "Every 15 kills fires an EMP that stuns all dots 1s"
+rarity = "rare"
+category = "nuke"
+effects = [SubResource("Resource_effect")]
+tags = PackedStringArray()

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/cards/CardResource.gd" id="1_cardresource"]
+[ext_resource type="Script" path="res://data/cards/CardEffectResource.gd" id="2_effectresource"]
+
+[sub_resource type="Resource" id="Resource_effect"]
+script = ExtResource("2_effectresource")
+effect_type = "chain_lightning"
+value = 3
+metadata = {
+"legacy_category": "elemental",
+"legacy_rarity": "rare"
+}
+
+[resource]
+script = ExtResource("1_cardresource")
+id = "tesla"
+display_name = "Tesla Coil"
+description = "Chain lightning hits 3 dots"
+rarity = "rare"
+category = "elemental"
+effects = [SubResource("Resource_effect")]
+tags = PackedStringArray()

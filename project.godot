@@ -17,17 +17,18 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Idle Dot Shooter"
 run/main_scene="uid://ddnbhknq4k5yy"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/app/icon.svg"
 
 [autoload]
 
-AudioManager="*uid://byqbuifprlanb"
-UpgradeManager="*uid://b3bpgnxu3wpgr"
-SaveManager="*uid://dvr3gk4a366g0"
-CardDatabase="*uid://2h41ine3fn1i"
-RunManager="*uid://ck7x123limwhh"
-TelemetryOverlay="*uid://btvtfecmyygv"
+AudioManager="*res://systems/audio/AudioManager.gd"
+UpgradeManager="*res://systems/progression/UpgradeManager.gd"
+SaveManager="*res://systems/progression/SaveManager.gd"
+CardDatabase="*res://systems/progression/CardDatabase.gd"
+RunManager="*res://systems/progression/RunManager.gd"
+TelemetryOverlay="*res://ui/overlays/telemetry_overlay.gd"
 _mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
+DebugMenu="*uid://cggqb75a8w8r"
 
 [display]
 
@@ -38,7 +39,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/godot_ai/plugin.cfg")
 
 [rendering]
 

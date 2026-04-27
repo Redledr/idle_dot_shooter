@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/cards/CardResource.gd" id="1_cardresource"]
+[ext_resource type="Script" path="res://data/cards/CardEffectResource.gd" id="2_effectresource"]
+
+[sub_resource type="Resource" id="Resource_effect"]
+script = ExtResource("2_effectresource")
+effect_type = "dot_bleed"
+value = 1
+metadata = {
+"legacy_category": "dot",
+"legacy_rarity": "common"
+}
+
+[resource]
+script = ExtResource("1_cardresource")
+id = "bleed"
+display_name = "Bleed"
+description = "Bullets cause bleed: 0.25 damage/sec for 5s"
+rarity = "common"
+category = "dot"
+effects = [SubResource("Resource_effect")]
+tags = PackedStringArray()

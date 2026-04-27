@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cjhfavdtarthf"]
+
+[ext_resource type="Script" uid="uid://dureie0tv70e4" path="res://ui/widgets/upgrade_button.gd" id="1_mq5fo"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=382677380]
+script = ExtResource("1_mq5fo")
+
+[node name="HBox" type="HBoxContainer" parent="." unique_id=978963040]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="HBox" unique_id=1422489054]
+layout_mode = 2
+
+[node name="LevelLabel" type="Label" parent="HBox" unique_id=1459919879]
+layout_mode = 2
+
+[node name="CostLabel" type="Label" parent="HBox" unique_id=1444987431]
+layout_mode = 2
+
+[node name="BuyButton" type="Button" parent="HBox" unique_id=466254057]
+layout_mode = 2
+text = "Buy"

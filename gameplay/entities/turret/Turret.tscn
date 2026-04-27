@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://u6s05xyoq5dh"]
+
+[ext_resource type="Script" uid="uid://c0n8shvwt836m" path="res://gameplay/entities/turret/turret.gd" id="1_75s58"]
+[ext_resource type="Script" uid="uid://wmwac53q8x8l" path="res://gameplay/components/ShooterComponent.gd" id="2_4sggw"]
+
+[node name="Turret" type="Node2D" unique_id=1634898967]
+script = ExtResource("1_75s58")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1353075769]
+
+[node name="ShooterComponent" type="Node" parent="." unique_id=409789410]
+script = ExtResource("2_4sggw")
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=1410725743]

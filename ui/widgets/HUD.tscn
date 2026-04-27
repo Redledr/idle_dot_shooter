@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bevpro4f3vxmj"]
+
+[ext_resource type="Script" uid="uid://g4qwwuqq2u6r" path="res://ui/widgets/hud.gd" id="1_qpvh6"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2015149012]
+script = ExtResource("1_qpvh6")
+
+[node name="TopCenter" type="HBoxContainer" parent="." unique_id=1863854406]
+custom_minimum_size = Vector2(400, 50)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="CurrencyLabel" type="Label" parent="TopCenter" unique_id=1202044601]
+layout_mode = 2
+
+[node name="DotsLabel" type="Label" parent="TopCenter" unique_id=905616054]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="TopCenter" unique_id=1300000001]
+layout_mode = 2
+text = "5:00"
+
+[node name="OfflineLabel" type="Label" parent="." unique_id=1100000001]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 60.0
+offset_right = 150.0
+offset_bottom = 110.0
+grow_horizontal = 2
+horizontal_alignment = 1
+
+[node name="PerfLabel" type="Label" parent="." unique_id=1160000001]
+visible = false
+anchors_preset = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 220.0
+offset_bottom = 36.0

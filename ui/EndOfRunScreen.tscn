@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://endofrun0001"]
-
-[ext_resource type="Script" uid="uid://bh2uyni4t4its" path="res://ui/end_of_run_screen.gd" id="1_eor"]
-
-[node name="EndOfRunScreen" type="Node2D" unique_id=-1589934591]
-script = ExtResource("1_eor")

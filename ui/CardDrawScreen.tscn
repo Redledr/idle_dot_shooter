@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://carddraw0001"]
-
-[ext_resource type="Script" uid="uid://bqyne4sbw8fv4" path="res://ui/card_draw_screen.gd" id="1_cds"]
-
-[node name="CardDrawScreen" type="Node2D" unique_id=-589934591]
-script = ExtResource("1_cds")
-hover_lift = 0.0
